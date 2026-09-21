@@ -1,486 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Christian Vern Tan | AI E-Commerce Product Image Creator</title>
-<meta name="description" content="AI-powered e-commerce product images, lifestyle visuals, product creatives, and marketing content created by Christian Vern Tan.">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Christian Vern Tan | AI E-Commerce Product Image Creator">
-<meta property="og:description" content="Product visuals that make products look ready to sell — AI-generated e-commerce creatives, lifestyle images, and ad graphics.">
-<meta property="og:image" content="assets/img/kemey-01-hero.jpg">
-<meta property="og:url" content="https://tanchristianvern.github.io/christianverntan/">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christian Vern Tan | E-Commerce Virtual Assistant</title>
+  <meta name="description" content="E-Commerce Virtual Assistant with hands-on EasyOrders experience, product listing, landing-page content, AI product creatives, WordPress support, workflow QA, and 7 years of software engineering experience." />
+  <meta property="og:title" content="Christian Vern Tan | E-Commerce Virtual Assistant" />
+  <meta property="og:description" content="EasyOrders product listing, e-commerce content, AI creatives, workflow QA, WordPress, and a strong technical background." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --ink:#14283c; --muted:#64717d; --teal:#0e7490; --teal2:#0891b2;
+      --bg:#f7fafb; --card:#ffffff; --line:#dfe8ec; --soft:#eaf4f6; --dark:#0f2336;
+      --shadow:0 16px 42px rgba(17,37,55,.10); --radius:22px; --max:1160px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none} img{display:block;width:100%}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    nav{position:sticky;top:0;z-index:30;background:rgba(247,250,251,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,232,236,.8)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:850;letter-spacing:-.02em}.brand span{color:var(--teal)}
+    .links{display:flex;gap:24px;align-items:center;font-size:14px;color:#4e5b67}.links a:hover{color:var(--teal)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 17px;font-weight:750;font-size:14px;border:1px solid var(--line);background:white;transition:.2s}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(17,37,55,.09)}
+    .btn.primary{background:var(--teal);border-color:var(--teal);color:white}.btn.dark{background:var(--dark);border-color:var(--dark);color:white}
+    .hero{padding:86px 0 54px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border-radius:999px;background:var(--soft);color:var(--teal);font-size:13px;font-weight:800;margin-bottom:20px}.dot{width:8px;height:8px;border-radius:50%;background:#16a34a}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-.045em;margin:0 0 22px;max-width:900px}
+    .lead{font-size:19px;color:#4d5b67;max-width:720px;margin:0 0 28px}.actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-card{background:linear-gradient(145deg,#10283c,#0e7490);color:white;padding:28px;border-radius:30px;box-shadow:var(--shadow);min-height:390px;display:flex;flex-direction:column;justify-content:space-between}
+    .hero-card .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#bfe8f1;font-weight:800}
+    .hero-card h2{font-size:32px;line-height:1.12;margin:12px 0 14px;letter-spacing:-.03em}.hero-card p{color:#d9edf1;margin:0}
+    .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.pill{font-size:12px;font-weight:750;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
+    .proof{padding:8px 0 58px}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.proof-item{background:white;border:1px solid var(--line);border-radius:16px;padding:20px}.proof-item strong{display:block;font-size:17px;margin-bottom:2px}.proof-item span{font-size:13px;color:var(--muted)}
+    section{padding:74px 0}.section-head{max-width:760px;margin-bottom:30px}.kicker{color:var(--teal);font-weight:850;font-size:13px;letter-spacing:.1em;text-transform:uppercase}.section-head h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.035em;line-height:1.08;margin:7px 0 11px}.section-head p{margin:0;color:var(--muted);font-size:17px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 6px 18px rgba(17,37,55,.035)}.num{font-size:12px;color:var(--teal);font-weight:900;letter-spacing:.12em}.card h3{font-size:19px;margin:9px 0 7px}.card p{font-size:14px;color:var(--muted);margin:0}
+    .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:white;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(17,37,55,.05)}
+    .project-media{aspect-ratio:16/11;background:#e9eff2;overflow:hidden}.project-media img{height:100%;object-fit:cover}.project-body{padding:24px}.tag{display:inline-block;font-size:12px;color:var(--teal);font-weight:850;text-transform:uppercase;letter-spacing:.08em}.project h3{font-size:24px;margin:7px 0 8px;letter-spacing:-.02em}.project p{color:var(--muted);margin:0 0 14px}.project ul{padding-left:19px;margin:10px 0 18px;color:#46535e}.project li{margin:4px 0;font-size:14px}.text-project{min-height:100%;display:flex;flex-direction:column;justify-content:space-between}.project-link{font-size:14px;font-weight:850;color:var(--teal)}
+    .gallery{display:grid;grid-template-columns:1fr .78fr;gap:14px;margin-top:20px}.gallery img{border-radius:18px;object-fit:cover;height:100%;border:1px solid var(--line)}
+    .experience{display:grid;grid-template-columns:1fr 1fr;gap:38px}.timeline{position:relative;padding-left:24px}.timeline:before{content:"";position:absolute;left:6px;top:6px;bottom:8px;width:2px;background:#d8e6ea}.role{position:relative;margin-bottom:27px}.role:before{content:"";position:absolute;left:-23px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 5px var(--soft)}.role .date{font-size:12px;font-weight:850;color:var(--teal);text-transform:uppercase;letter-spacing:.06em}.role h3{font-size:19px;margin:4px 0 3px}.role p{font-size:14px;color:var(--muted);margin:0}
+    .about-box{background:var(--dark);color:white;border-radius:28px;padding:34px}.about-box h3{font-size:28px;line-height:1.2;margin:0 0 12px}.about-box p{color:#cddae3}.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tools span{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);padding:7px 10px;border-radius:10px;font-size:12px;font-weight:700}
+    .cta{padding:75px 0}.cta-box{background:linear-gradient(120deg,#e7f4f7,#ffffff);border:1px solid #cfe5ea;border-radius:30px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.cta h2{font-size:36px;letter-spacing:-.03em;line-height:1.1;margin:0 0 8px}.cta p{color:var(--muted);margin:0}
+    footer{padding:28px 0 44px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.links{display:none}.hero{padding-top:54px}.hero-grid,.experience,.cta-box{grid-template-columns:1fr}.hero-card{min-height:auto}.proof-grid{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}.work-grid{grid-template-columns:1fr}.cta-box{align-items:start}}
+    @media(max-width:580px){.wrap{width:min(var(--max),calc(100% - 28px))}.proof-grid,.services{grid-template-columns:1fr}.hero{padding-top:42px}.hero-card{padding:24px}.actions .btn{width:100%}.gallery{grid-template-columns:1fr}.cta-box{padding:28px}.nav .btn{padding:10px 12px}}
+  </style>
 </head>
 <body>
-
-<header class="site-header" id="siteHeader">
-  <div class="wrap">
-    <a href="#top" class="brand">Christian Vern Tan<span>.</span></a>
-    <nav aria-label="Primary">
-      <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
-    <div class="nav-cta">
-      <a href="#contact" class="btn btn-ghost">Contact</a>
-      <a href="#work" class="btn btn-primary">View Work</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mobile-nav" id="mobileNav">
-  <a href="#work">Work</a>
-  <a href="#services">Services</a>
-  <a href="#process">Process</a>
-  <a href="#experience">Experience</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<main id="top">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-copy">
-        <span class="hero-eyebrow">Open for e-commerce & Shopify projects</span>
-        <h1>Product visuals that make products <em>look ready to sell.</em></h1>
-        <p class="hero-desc">I'm Christian — an AI e-commerce product image creator. I turn plain product photos and simple ideas into clean, scroll-stopping visuals for online stores, marketplaces, ads, and social feeds.</p>
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-ghost">Let's Work Together</a>
-          <a href="https://drive.google.com/file/d/1lDdfSgs9io_tldCHRj3-ucvFoEHSq1fA/view?usp=sharing" class="btn btn-ghost" target="_blank" rel="noopener">Download Resume</a>
-        </div>
-        <div class="hero-stats">
-          <div><strong>2</strong><span>Brands styled</span></div>
-          <div><strong>8+</strong><span>Creatives delivered</span></div>
-          <div><strong>5</strong><span>Visual formats</span></div>
-        </div>
+  <nav>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Christian Vern <span>Tan</span></a>
+      <div class="links">
+        <a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a>
       </div>
-      <div class="hero-visual">
-        <div class="hero-visual-frame">
-          <img src="assets/img/dino-01-hero.jpg" alt="AI-generated e-commerce advertisement for a Stegosaurus baby nap pillow, showing the product with lifestyle photo insets" width="1254" height="1254">
-        </div>
-        <div class="hero-visual-tag">Made with AI + <strong>design craft</strong></div>
-      </div>
+      <a class="btn primary" href="mailto:tanchristianvern@gmail.com">Contact Me</a>
     </div>
-  </section>
+  </nav>
 
-  <!-- ============ WORK ============ -->
-  <section class="band" id="work">
-    <div class="wrap">
-      <div class="section-head reveal">
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
         <div>
-          <span class="section-kicker">Selected Work</span>
-          <h2>Real product creatives, built for real listings.</h2>
-        </div>
-        <p>Every image below is AI-generated and design-finished for an actual product — no fillers, no stock templates.</p>
-      </div>
-
-      <!-- Case Study 1: Kemey -->
-      <article class="case-study reveal">
-        <div class="case-head">
-          <div>
-            <span class="case-tag">Product Advertising · Social Media Creatives</span>
-            <h3>Kemey Hot Air Styling Brush</h3>
+          <div class="badge"><span class="dot"></span> Open to full-time remote E-Commerce VA opportunities</div>
+          <h1>E-commerce support that keeps products accurate, organized, and ready to sell.</h1>
+          <p class="lead">I'm Christian, an E-Commerce Virtual Assistant with hands-on EasyOrders experience, remote content support, and 7 years of software engineering experience. I help online stores with product listings, landing-page content, AI-assisted product creatives, workflow tracking, and quality control.</p>
+          <div class="actions">
+            <a class="btn primary" href="#work">View E-Commerce Work</a>
+            <a class="btn" href="Christian_Vern_Tan_Ecommerce_VA_Resume_1Page.pdf" target="_blank" rel="noopener">Download Resume</a>
+            <a class="btn" href="https://www.onlinejobs.ph/jobseekers/info/578567" target="_blank" rel="noopener">OnlineJobs.ph</a>
           </div>
+        </div>
+        <aside class="hero-card">
           <div>
-            <p class="case-desc">A set of AI-generated marketing visuals for a hot-air styling brush — feature call-outs, step-by-step usage, and a lifestyle scene, built for a product listing and paid social ads.</p>
-            <div class="case-meta">
-              <span class="pill">Midjourney</span>
-              <span class="pill">Gemini</span>
-              <span class="pill">Canva</span>
+            <div class="eyebrow">What I bring</div>
+            <h2>E-commerce execution with a technical problem-solving mindset.</h2>
+            <p>My background combines store support and content workflows with years of software engineering, QA, troubleshooting, documentation, and client coordination.</p>
+          </div>
+          <div class="stack">
+            <span class="pill">EasyOrders</span><span class="pill">Product Listings</span><span class="pill">Canva</span><span class="pill">ChatGPT</span><span class="pill">Gemini</span><span class="pill">Midjourney</span><span class="pill">WordPress</span><span class="pill">Notion</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="proof">
+      <div class="wrap proof-grid">
+        <div class="proof-item"><strong>EasyOrders</strong><span>Hands-on product listing and storefront support</span></div>
+        <div class="proof-item"><strong>UAE COD</strong><span>Product content and listing experience for a UAE storefront</span></div>
+        <div class="proof-item"><strong>7 Years</strong><span>Professional software engineering experience</span></div>
+        <div class="proof-item"><strong>Remote VA</strong><span>WordPress, content, AI creative, and publishing support</span></div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">How I Can Help</div><h2>Practical support for the work behind an online store.</h2><p>I focus on accurate execution, organized workflows, and content that is ready for review and publishing.</p></div>
+        <div class="services">
+          <article class="card"><div class="num">01</div><h3>Product Listing & Store Support</h3><p>Titles, SKUs, pricing, categories, SEO fields, images, and product information entered and checked in EasyOrders.</p></article>
+          <article class="card"><div class="num">02</div><h3>Landing-Page Content</h3><p>Benefit-focused headlines, feature copy, product descriptions, and ad briefs created from the product and offer details.</p></article>
+          <article class="card"><div class="num">03</div><h3>AI Product Creatives</h3><p>Product hero visuals, feature callouts, lifestyle scenes, and vertical ad formats using AI tools with Canva finishing.</p></article>
+          <article class="card"><div class="num">04</div><h3>Workflow Tracking & QA</h3><p>Structured content pipelines in Notion, review tracking, data checks, and organized handoffs before publishing.</p></article>
+          <article class="card"><div class="num">05</div><h3>WordPress Content Support</h3><p>Article formatting, headings, images, captions, featured images, publishing, and consistent page presentation.</p></article>
+          <article class="card"><div class="num">06</div><h3>Technical & Admin Support</h3><p>Troubleshooting, documentation, data accuracy, Google Workspace, Microsoft Office, and fast adaptation to new systems.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Selected Work</div><h2>E-commerce operations first, creative support second.</h2><p>These examples show the mix of product listing, content, workflow, and creative work I can support in a remote e-commerce role.</p></div>
+        <div class="work-grid">
+          <article class="project">
+            <div class="project-body text-project">
+              <div>
+                <span class="tag">EasyOrders · Product Listing</span>
+                <h3>Live UAE COD Product Listing</h3>
+                <p>Built and published a product page on an EasyOrders-powered COD storefront serving the UAE market.</p>
+                <ul><li>Product title and product information</li><li>SKU, price, categories, and SEO fields</li><li>Product images and page organization</li><li>Final quality check before publishing</li></ul>
+              </div>
+              <a class="project-link" href="https://www.assileuae.site/products/perfume" target="_blank" rel="noopener">View live product listing →</a>
             </div>
-          </div>
-        </div>
-        <div class="case-gallery">
-          <figure class="tile-hero">
-            <a href="assets/img/kemey-01-hero.jpg" class="lightbox-trigger" data-caption="Kemey — feature highlight creative">
-              <img src="assets/img/kemey-01-hero.jpg" alt="Kemey hot air styling brush advertisement — One Tool, Endless Styles, with feature call-outs for dry and style, add volume, and two brush attachments" loading="lazy" width="1254" height="1254">
-              <figcaption class="cap">Feature highlight</figcaption>
-            </a>
-          </figure>
-          <figure class="tile-tall">
-            <a href="assets/img/kemey-04-lifestyle-vertical.jpg" class="lightbox-trigger" data-caption="Kemey — vertical ad creative">
-              <img src="assets/img/kemey-04-lifestyle-vertical.jpg" alt="Vertical Kemey advertisement, Dry Style Volumize, with a lifestyle photo of a model styling her hair against a city skyline" loading="lazy" width="844" height="1500">
-              <figcaption class="cap">Vertical ad format</figcaption>
-            </a>
-          </figure>
-          <figure class="tile-a">
-            <a href="assets/img/kemey-02-features.jpg" class="lightbox-trigger" data-caption="Kemey — smart design breakdown">
-              <img src="assets/img/kemey-02-features.jpg" alt="Kemey advertisement, Smart Design Easy Styling, breaking down the large round brush, integrated controls, and wired design" loading="lazy" width="1254" height="1254">
-              <figcaption class="cap">Design breakdown</figcaption>
-            </a>
-          </figure>
-          <figure class="tile-b">
-            <a href="assets/img/kemey-03-lifestyle-steps.jpg" class="lightbox-trigger" data-caption="Kemey — usage steps with model">
-              <img src="assets/img/kemey-03-lifestyle-steps.jpg" alt="Kemey advertisement, One Tool Everyday Blowout, showing a three-step usage sequence with a model styling her hair" loading="lazy" width="1254" height="1254">
-              <figcaption class="cap">Usage steps</figcaption>
-            </a>
-          </figure>
-        </div>
-      </article>
-
-      <!-- Case Study 2: Stegosaurus -->
-      <article class="case-study reveal">
-        <div class="case-head">
-          <div>
-            <span class="case-tag">AI Lifestyle Images · Product Advertising</span>
-            <h3>Stegosaurus Baby Nap Pillow</h3>
-          </div>
-          <div>
-            <p class="case-desc">A full creative set for a plush baby nap pillow — product hero shots, detail close-ups, and an AI-composited lifestyle scene placing the product in a real home setting.</p>
-            <div class="case-meta">
-              <span class="pill">Midjourney</span>
-              <span class="pill">ChatGPT</span>
-              <span class="pill">Canva</span>
+          </article>
+          <article class="project">
+            <div class="project-body text-project">
+              <div>
+                <span class="tag">Content · Workflow</span>
+                <h3>Landing Page & Ad Brief Workflow</h3>
+                <p>Turned basic product and offer information into structured, review-ready e-commerce content.</p>
+                <ul><li>Headline and subtitle development</li><li>Benefit and feature copy</li><li>Ad-ready messaging and audience ideas</li><li>Notion pipeline from new product to review and approval</li></ul>
+              </div>
+              <span class="project-link">EasyOrders + Notion + AI-assisted content workflow</span>
             </div>
-          </div>
+          </article>
+          <article class="project">
+            <div class="project-media"><img src="assets/img/kemey-01-hero.jpg" alt="E-commerce feature creative for a hot air styling brush" /></div>
+            <div class="project-body"><span class="tag">AI Creative · E-Commerce</span><h3>Kemey Hot Air Styling Brush</h3><p>A product creative set covering feature callouts, usage, lifestyle placement, and vertical ad presentation.</p><div class="gallery"><img src="assets/img/kemey-02-features.jpg" alt="Feature callout creative for hot air styling brush" /><img src="assets/img/kemey-04-lifestyle-vertical.jpg" alt="Vertical lifestyle advertisement for hot air styling brush" /></div></div>
+          </article>
+          <article class="project">
+            <div class="project-media"><img src="assets/img/dino-01-hero.jpg" alt="E-commerce hero creative for a dinosaur baby nap pillow" /></div>
+            <div class="project-body"><span class="tag">AI Creative · Product Advertising</span><h3>Stegosaurus Baby Nap Pillow</h3><p>A multi-format product creative set with hero, detail, lifestyle, and vertical advertising variations.</p><div class="gallery"><img src="assets/img/dino-02-detail.jpg" alt="Detail callout creative for dinosaur baby nap pillow" /><img src="assets/img/dino-04-vertical.jpg" alt="Vertical lifestyle advertisement for dinosaur baby nap pillow" /></div></div>
+          </article>
         </div>
-        <div class="case-gallery">
-          <figure class="tile-hero">
-            <a href="assets/img/dino-01-hero.jpg" class="lightbox-trigger" data-caption="Stegosaurus pillow — hero creative">
-              <img src="assets/img/dino-01-hero.jpg" alt="Stegosaurus baby nap pillow advertisement, A Cozy Spot for Your Little One, with lifestyle photo insets of a baby and parent" loading="lazy" width="1254" height="1254">
-              <figcaption class="cap">Hero creative</figcaption>
-            </a>
-          </figure>
-          <figure class="tile-tall">
-            <a href="assets/img/dino-04-vertical.jpg" class="lightbox-trigger" data-caption="Stegosaurus pillow — vertical lifestyle ad">
-              <img src="assets/img/dino-04-vertical.jpg" alt="Vertical advertisement for the Stegosaurus pillow, Soft Comfort for Your Little One, with a real lifestyle photo of a mother and baby" loading="lazy" width="844" height="1500">
-              <figcaption class="cap">Lifestyle placement</figcaption>
-            </a>
-          </figure>
-          <figure class="tile-a">
-            <a href="assets/img/dino-02-detail.jpg" class="lightbox-trigger" data-caption="Stegosaurus pillow — construction detail">
-              <img src="assets/img/dino-02-detail.jpg" alt="Stegosaurus pillow advertisement, Practical Design for Extra Comfort, with close-up detail shots of the fabric and bolsters" loading="lazy" width="1254" height="1254">
-              <figcaption class="cap">Detail close-ups</figcaption>
-            </a>
-          </figure>
-          <figure class="tile-b">
-            <a href="assets/img/dino-03-lifestyle.jpg" class="lightbox-trigger" data-caption="Stegosaurus pillow — social creative">
-              <img src="assets/img/dino-03-lifestyle.jpg" alt="Stegosaurus pillow advertisement, A Cozy Spot for Happy Moments, highlighting side bolsters, soft plush, and adorable design" loading="lazy" width="1254" height="1254">
-              <figcaption class="cap">Social creative</figcaption>
-            </a>
-          </figure>
-        </div>
-      </article>
+      </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- ============ SERVICES ============ -->
-  <section class="band band-panel" id="services">
-    <div class="wrap">
-      <div class="section-head reveal">
+    <section id="experience">
+      <div class="wrap experience">
         <div>
-          <span class="section-kicker">Services</span>
-          <h2>What I create.</h2>
-        </div>
-        <p>Six ways to give a product better visuals — pick one, or bundle them for a full listing.</p>
-      </div>
-
-      <div class="service-list reveal">
-        <div class="service-row">
-          <span class="service-idx">01</span>
-          <span class="service-name">E-Commerce Product Images</span>
-          <span class="service-desc">Clean, professional product visuals ready for online stores and marketplaces.</span>
-          <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
-        </div>
-        <div class="service-row">
-          <span class="service-idx">02</span>
-          <span class="service-name">AI Lifestyle Product Images</span>
-          <span class="service-desc">Your product placed into realistic, attractive lifestyle scenes using generative AI.</span>
-          <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
-        </div>
-        <div class="service-row">
-          <span class="service-idx">03</span>
-          <span class="service-name">Product Hero Images</span>
-          <span class="service-desc">Strong, product-focused visuals designed to make the product the star of the frame.</span>
-          <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
-        </div>
-        <div class="service-row">
-          <span class="service-idx">04</span>
-          <span class="service-name">Product Advertising Creatives</span>
-          <span class="service-desc">Promotional graphics combining product shots, marketing copy, features, and a call-to-action.</span>
-          <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
-        </div>
-        <div class="service-row">
-          <span class="service-idx">05</span>
-          <span class="service-name">Social Media Product Creatives</span>
-          <span class="service-desc">Simple, professional visuals sized and styled for Facebook and Instagram.</span>
-          <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
-        </div>
-        <div class="service-row">
-          <span class="service-idx">06</span>
-          <span class="service-name">AI Product Concepts</span>
-          <span class="service-desc">A basic product reference turned into several different creative visual directions.</span>
-          <span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ BEFORE / AFTER ============ -->
-  <section class="band tight" id="before-after">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-kicker">How It Transforms</span>
-          <h2>From product reference to sales-ready visual.</h2>
-        </div>
-        <p>A basic reference photo goes in. A polished, story-driven creative comes out.</p>
-      </div>
-
-      <div class="ba-card reveal">
-        <div class="ba-panel ba-panel-img">
-          <span class="label label-float">BEFORE</span>
-          <img src="assets/img/dino-05-before.jpg" alt="Before — plain product ad for the Stegosaurus baby nap pillow with basic layout and copy" loading="lazy" width="724" height="721">
-        </div>
-        <div class="ba-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <div class="ba-panel ba-panel-img">
-          <span class="label label-float">AFTER</span>
-          <img src="assets/img/dino-06-after.jpg" alt="After — finished lifestyle creative for the Stegosaurus baby nap pillow with a mother and baby scene, feature icons, and a call-to-action" loading="lazy" width="941" height="1672">
-        </div>
-      </div>
-      <p class="ba-note">A basic product ad is refined into a story-driven lifestyle creative — see the Stegosaurus set above for the full finished project.</p>
-    </div>
-  </section>
-
-  <!-- ============ PROCESS ============ -->
-  <section class="band band-panel" id="process">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-kicker">Process</span>
-          <h2>Four steps, start to finish.</h2>
-        </div>
-        <p>The same simple workflow behind every creative in the Work section.</p>
-      </div>
-
-      <div class="process-grid reveal">
-        <div class="process-step">
-          <span class="num">01</span>
-          <h4>Product</h4>
-          <p>Get the product reference, photos, or offer details from the client.</p>
-        </div>
-        <div class="process-step">
-          <span class="num">02</span>
-          <h4>Concept</h4>
-          <p>Plan the composition, scene, and message the visual needs to carry.</p>
-        </div>
-        <div class="process-step">
-          <span class="num">03</span>
-          <h4>Generate</h4>
-          <p>Produce the visual with Midjourney, Gemini, or ChatGPT image tools.</p>
-        </div>
-        <div class="process-step">
-          <span class="num">04</span>
-          <h4>Refine</h4>
-          <p>Finish in Canva — layout, copy, icons, and a clear call-to-action.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXPERIENCE (Virtual Assistant) ============ -->
-  <section class="band" id="experience">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-kicker">Experience</span>
-          <h2>Virtual Assistant — WordPress &amp; E-Commerce.</h2>
-        </div>
-        <p>Alongside AI creative work, I provide WordPress management and e-commerce support, backed by 7 years of software engineering experience.</p>
-      </div>
-
-      <!-- VA Services -->
-      <div class="va-services reveal">
-        <div class="va-services-col">
-          <h4 class="va-services-title">WordPress Virtual Assistant</h4>
-          <ul class="va-mini-list">
-            <li><strong>Blog Content Formatting &amp; Publishing</strong><span>Header sizing, paragraph structure, and clean layout for every post.</span></li>
-            <li><strong>Image Sourcing &amp; Curation</strong><span>Stock or AI-generated (Midjourney) featured and section images matched to each headline.</span></li>
-            <li><strong>Manuscript &amp; Document Formatting</strong><span>Cleaning up manuscripts in Word and preparing files for platforms like IngramSpark.</span></li>
-            <li><strong>Layout &amp; Design Updates</strong><span>Keeping a site's look current and cohesive as content grows.</span></li>
-          </ul>
-        </div>
-        <div class="va-services-col">
-          <h4 class="va-services-title">E-Commerce &amp; Landing Pages</h4>
-          <ul class="va-mini-list">
-            <li><strong>Product Data Entry &amp; Listings</strong><span>Titles, SKUs, pricing, categories, and images added directly in store admin.</span></li>
-            <li><strong>Landing Page Copywriting</strong><span>Headlines, subtitles, and benefit-driven feature copy from a product title and offer angles.</span></li>
-            <li><strong>Multi-Market Pricing &amp; Translation</strong><span>Pricing across AED/SAR and English–Arabic translation for UAE/Saudi markets.</span></li>
-            <li><strong>Workflow Tracking &amp; QA</strong><span>Structured draft → review → approval pipeline in Notion.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- VA Case studies -->
-      <div class="va-cases reveal">
-        <article class="va-card">
-          <span class="case-tag">WordPress</span>
-          <h3>Blog Article Publishing System</h3>
-          <p class="case-desc">Published accurate, visually engaging listicle-style articles for a content client — sourcing client-approved imagery and formatting each post in WordPress from a Google Doc draft.</p>
-          <div class="case-meta">
-            <span class="pill">WordPress</span>
-            <span class="pill">Google Docs</span>
-            <span class="pill">Shutterstock</span>
+          <div class="section-head"><div class="kicker">Experience</div><h2>A technical career now focused on e-commerce.</h2><p>My strongest differentiator is the combination of hands-on VA work and a long technical background.</p></div>
+          <div class="timeline">
+            <div class="role"><div class="date">Current · Part-Time</div><h3>E-Commerce Virtual Assistant · Remote</h3><p>EasyOrders product listings, landing-page content, AI-assisted creatives, Notion workflow tracking, and publishing QA for a UAE COD storefront.</p></div>
+            <div class="role"><div class="date">2025 - Present</div><h3>Desktop Engineer · DSWD - Negros Island Region</h3><p>End-user technical support, hardware/software troubleshooting, asset tracking, maintenance, service-level support, and user training.</p></div>
+            <div class="role"><div class="date">2018 - 2025</div><h3>Software Engineer · Straive</h3><p>Data-conversion modules, testing and quality checks, workflow improvements, client SME coordination, and training of new team members.</p></div>
+            <div class="role"><div class="date">2024 - 2025</div><h3>Remote Virtual Assistant Projects</h3><p>WordPress publishing, AI/Canva visual support, content enhancement, manuscript formatting, and IngramSpark publishing assistance.</p></div>
           </div>
-          <a href="https://www.tprteaching.com/historical-events/" target="_blank" rel="noopener" class="va-link">View reference example ↗</a>
-        </article>
-
-        <article class="va-card">
-          <span class="case-tag">WordPress</span>
-          <h3>Ongoing Blog Management</h3>
-          <p class="case-desc">Kept a writer's WordPress blog polished and organized post after post — consistent header/paragraph structure, featured images, and captions sitewide.</p>
-          <div class="case-meta">
-            <span class="pill">WordPress</span>
-            <span class="pill">Canva</span>
-          </div>
-        </article>
-
-        <article class="va-card">
-          <span class="case-tag">E-Commerce</span>
-          <h3>Live Product Listing (COD Storefront)</h3>
-          <p class="case-desc">Got an accurate, SEO-complete product page live on a COD storefront serving the UAE market — title, SKU, pricing, categories, SEO fields, and images.</p>
-          <div class="case-meta">
-            <span class="pill">Easy Orders</span>
-          </div>
-          <a href="https://www.assileuae.site/products/perfume" target="_blank" rel="noopener" class="va-link">View live page ↗</a>
-        </article>
-
-        <article class="va-card">
-          <span class="case-tag">E-Commerce</span>
-          <h3>Multi-Product Workflow Pipeline</h3>
-          <p class="case-desc">Built a 6-stage Kanban pipeline in Notion to track multiple landing pages through New Product → Content Creation → Review → Approved/Rejected, instead of ad-hoc updates.</p>
-          <div class="case-meta">
-            <span class="pill">Notion</span>
-          </div>
-        </article>
-
-        <article class="va-card">
-          <span class="case-tag">E-Commerce</span>
-          <h3>Landing Page Copy &amp; Ad Brief Ownership</h3>
-          <p class="case-desc">Turned a bare product title, price, and offer into a full landing page brief — headline, feature copy, ad-ready copy, and audience-targeting suggestions.</p>
-          <div class="case-meta">
-            <span class="pill">Notion</span>
-            <span class="pill">Meta Ads</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TOOLS ============ -->
-  <section class="band tight" id="tools">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <span class="section-kicker">Tools</span>
-          <h2>What I create with.</h2>
         </div>
+        <aside class="about-box" id="about">
+          <h3>Detail-oriented, tech-savvy, and comfortable learning new systems.</h3>
+          <p>I have a Bachelor of Science in Information Technology from Negros Oriental State University, graduating Magna Cum Laude. My work style is built around accuracy, clear documentation, organized execution, and solving problems without needing constant supervision.</p>
+          <p>I'm now looking for a long-term, full-time remote E-Commerce VA, Product Listing, or E-Commerce Operations opportunity where I can contribute immediately and continue expanding my platform knowledge.</p>
+          <div class="tools"><span>EasyOrders</span><span>WordPress</span><span>Canva</span><span>ChatGPT</span><span>Gemini</span><span>Midjourney</span><span>Notion</span><span>Google Workspace</span><span>Microsoft Office</span><span>Basic HTML/XML</span><span>Linux/Unix</span></div>
+        </aside>
       </div>
-      <div class="tools-strip reveal">
-        <span class="tool-chip"><span class="dot"></span>Midjourney</span>
-        <span class="tool-chip"><span class="dot"></span>Gemini</span>
-        <span class="tool-chip"><span class="dot"></span>ChatGPT</span>
-        <span class="tool-chip"><span class="dot"></span>Canva</span>
-        <span class="tool-chip"><span class="dot"></span>Generative AI Tools</span>
-        <span class="tool-chip"><span class="dot"></span>WordPress</span>
-        <span class="tool-chip"><span class="dot"></span>E-Commerce Listings</span>
-        <span class="tool-chip"><span class="dot"></span>Shopify (Basic)</span>
-        <span class="tool-chip"><span class="dot"></span>Notion</span>
-        <span class="tool-chip"><span class="dot"></span>Easy Orders</span>
-        <span class="tool-chip"><span class="dot"></span>IngramSpark</span>
-        <span class="tool-chip"><span class="dot"></span>Google Workspace</span>
-        <span class="tool-chip"><span class="dot"></span>Microsoft Office</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="band" id="about">
-    <div class="wrap about-grid">
-      <div class="reveal">
-        <span class="section-kicker">About</span>
-        <p class="about-lead">I turn product ideas into visuals that are ready to sell.</p>
-        <p class="about-copy">I'm a tech-savvy creative working at the intersection of AI image generation and e-commerce content. I use AI and design tools to turn simple product ideas or reference photos into clean, professional visuals for stores, listings, ads, and social feeds.</p>
-        <p class="about-copy">I'm comfortable adapting fast to new AI tools and creative workflows — the field moves quickly, and the work has to keep up.</p>
+    <section class="cta" id="contact">
+      <div class="wrap cta-box">
+        <div><h2>Looking for reliable e-commerce support?</h2><p>I'm available for full-time remote opportunities and long-term e-commerce teams.</p></div>
+        <div class="actions"><a class="btn primary" href="mailto:tanchristianvern@gmail.com">Email Me</a><a class="btn dark" href="https://wa.me/639762624273" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="https://www.linkedin.com/in/christian-vern-tan/" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
-      <div class="about-facts reveal">
-        <div class="fact">
-          <strong>Focus</strong>
-          <span>AI-generated product visuals for e-commerce, marketplaces, and social ads.</span>
-        </div>
-        <div class="fact">
-          <strong>Background</strong>
-          <span>Virtual Assistant experience in WordPress management and e-commerce support, with a technical foundation from 7 years of software engineering.</span>
-        </div>
-        <div class="fact">
-          <strong>Availability</strong>
-          <span>Open to freelance projects for Shopify stores, Amazon sellers, product brands, and marketing agencies.</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="band contact-band" id="contact">
-    <div class="wrap contact-inner">
-      <div class="reveal">
-        <span class="section-kicker">Contact</span>
-        <h2>Have a product that needs better visuals?</h2>
-        <p class="contact-copy">Let's create something that looks ready to sell — send over your product and a bit about where it'll be used.</p>
-      </div>
-      <div class="contact-actions reveal">
-        <a href="mailto:tanchristianvern@gmail.com" class="btn btn-primary">Email Me</a>
-        <a href="https://wa.me/639762624273" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://www.linkedin.com/in/christian-vern-tan/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="contact-links">
-        <span>tanchristianvern@gmail.com</span>
-        <span>+63 976 262 4273</span>
-        <a href="https://wa.me/639762624273" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://www.facebook.com/christianvern.tan" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.linkedin.com/in/christian-vern-tan/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.onlinejobs.ph/jobseekers/info/578567" target="_blank" rel="noopener">OnlineJobs.ph Profile</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:10px;">
-    <span>&copy; 2026 Christian Vern Tan. All rights reserved.</span>
-    <span>Built with AI-assisted creative tools.</span>
-  </div>
-</footer>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-  <img id="lightboxImg" src="" alt="">
-  <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
-
-<script src="assets/js/main.js"></script>
+  <footer><div class="wrap foot"><span>© 2026 Christian Vern Tan</span><span>EasyOrders · E-Commerce Support · Product Listing · AI & Canva</span></div></footer>
 </body>
 </html>
