@@ -38,13 +38,55 @@
     .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 6px 18px rgba(17,37,55,.035)}.num{font-size:12px;color:var(--teal);font-weight:900;letter-spacing:.12em}.card h3{font-size:19px;margin:9px 0 7px}.card p{font-size:14px;color:var(--muted);margin:0}
     .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:white;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 8px 24px rgba(17,37,55,.05)}
     .project-media{aspect-ratio:16/11;background:#e9eff2;overflow:hidden}.project-media img{height:100%;object-fit:cover}.project-body{padding:24px}.tag{display:inline-block;font-size:12px;color:var(--teal);font-weight:850;text-transform:uppercase;letter-spacing:.08em}.project h3{font-size:24px;margin:7px 0 8px;letter-spacing:-.02em}.project p{color:var(--muted);margin:0 0 14px}.project ul{padding-left:19px;margin:10px 0 18px;color:#46535e}.project li{margin:4px 0;font-size:14px}.text-project{min-height:100%;display:flex;flex-direction:column;justify-content:space-between}.project-link{font-size:14px;font-weight:850;color:var(--teal)}
-    .gallery{display:grid;grid-template-columns:1fr .78fr;gap:14px;margin-top:20px}.gallery img{border-radius:18px;object-fit:cover;height:100%;border:1px solid var(--line)}
+    
+
+    .case-study{background:white;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 10px 30px rgba(17,37,55,.06)}
+    .case-study-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0}
+    .case-copy{padding:28px}.case-visual{background:#e8eef1;min-height:340px;display:flex;align-items:center;justify-content:center}
+    .case-visual .work-image{border-radius:0;height:100%;aspect-ratio:auto;box-shadow:none}.case-visual .work-image img{height:100%;object-fit:cover}
+    .case-copy h3{font-size:28px;line-height:1.15;margin:8px 0 10px;letter-spacing:-.025em}.case-copy p{color:var(--muted);margin:0 0 16px}
+    .case-list{margin:14px 0 20px;padding-left:20px;color:#46535e}.case-list li{margin:6px 0;font-size:14px}
+    .process-strip{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.process-step{font-size:12px;font-weight:800;padding:8px 10px;border-radius:999px;background:var(--soft);color:var(--teal);border:1px solid #d8e9ed}
+    .live-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.live-link{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid var(--line);border-radius:11px;background:#fff;font-size:13px;font-weight:800;color:var(--teal);transition:.2s}.live-link:hover{transform:translateY(-1px);border-color:#9dcbd5;box-shadow:0 8px 18px rgba(17,37,55,.07)}
+    .portfolio-split{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}.mini-case{background:white;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 7px 22px rgba(17,37,55,.04)}.mini-case h3{font-size:22px;margin:8px 0}.mini-case p{color:var(--muted);margin:0 0 14px}.mini-case ul{padding-left:19px;color:#46535e}.mini-case li{font-size:14px;margin:5px 0}
+
+    .work-gallery{display:grid;gap:22px;margin-top:30px}
+    .gallery-project{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:0 8px 24px rgba(17,37,55,.045)}
+    .gallery-project-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px}
+    .gallery-project-head h3{margin:4px 0 2px;font-size:22px;letter-spacing:-.02em}.gallery-project-head p{margin:0;color:var(--muted);font-size:14px}
+    .gallery-hint{font-size:12px;color:var(--muted);white-space:nowrap}
+    .work-slider{position:relative;overflow:hidden;border-radius:20px}
+    .work-slider-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,32%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:2px 2px 10px;scrollbar-width:none}
+    .work-slider-track::-webkit-scrollbar{display:none}
+    .work-image{position:relative;display:block;width:100%;padding:0;border:0;border-radius:18px;background:#e8eef1;overflow:hidden;cursor:zoom-in;scroll-snap-align:start;aspect-ratio:4/5;box-shadow:0 2px 9px rgba(17,37,55,.06);transition:transform .22s ease,box-shadow .22s ease}
+    .work-image.landscape{aspect-ratio:4/3}.work-image.square{aspect-ratio:1/1}
+    .work-image img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease,filter .35s ease}
+    .work-image:after{content:'View full';position:absolute;left:14px;bottom:14px;padding:7px 10px;border-radius:999px;background:rgba(15,35,54,.84);color:#fff;font:800 11px/1 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.03em;opacity:0;transform:translateY(6px);transition:.2s;pointer-events:none}
+    .work-image:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(17,37,55,.14)}
+    .work-image:hover img{transform:scale(1.025);filter:saturate(1.03)}.work-image:hover:after{opacity:1;transform:none}
+    .slider-nav{position:absolute;top:50%;z-index:4;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.82);background:rgba(15,35,54,.88);color:#fff;display:grid;place-items:center;font-size:24px;line-height:1;cursor:pointer;box-shadow:0 8px 22px rgba(15,35,54,.2);opacity:0;transform:translateY(-50%) scale(.92);transition:.2s}
+    .work-slider:hover .slider-nav,.work-slider:focus-within .slider-nav{opacity:1;transform:translateY(-50%) scale(1)}
+    .slider-nav:hover{background:var(--teal)}.slider-nav.prev{left:12px}.slider-nav.next{right:12px}.slider-nav:disabled{opacity:0!important;pointer-events:none}
+    .gallery-note{margin-top:16px;font-size:13px;color:var(--muted)}
+    .gallery-note strong{color:var(--ink)}
+
+    .lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(5,16,26,.94);padding:24px}
+    .lightbox.open{display:flex}.lightbox-dialog{position:relative;width:min(1180px,100%);height:min(90vh,900px);display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .lightbox-img-wrap{position:relative;max-width:100%;max-height:calc(90vh - 80px);display:flex;align-items:center;justify-content:center}
+    .lightbox img{max-width:100%;max-height:calc(90vh - 80px);width:auto;height:auto;object-fit:contain;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.48);background:#0b1721}
+    .lightbox-close{position:absolute;right:0;top:0;z-index:7;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.1);color:#fff;font-size:25px;cursor:pointer}
+    .lightbox-close:hover{background:rgba(255,255,255,.18)}
+    .lightbox-nav{position:absolute;top:50%;z-index:7;width:50px;height:50px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(15,35,54,.75);color:#fff;font-size:30px;cursor:pointer;opacity:.3;transform:translateY(-50%);transition:.2s}
+    .lightbox:hover .lightbox-nav,.lightbox-nav:focus{opacity:1}.lightbox-nav:hover{background:var(--teal)}.lightbox-prev{left:0}.lightbox-next{right:0}
+    .lightbox-meta{margin-top:14px;color:#dce8ee;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;min-height:28px;font-size:13px}.lightbox-meta strong{color:white}.lightbox-count{color:#8fb1be}
+    body.lightbox-open{overflow:hidden}
+
     .experience{display:grid;grid-template-columns:1fr 1fr;gap:38px}.timeline{position:relative;padding-left:24px}.timeline:before{content:"";position:absolute;left:6px;top:6px;bottom:8px;width:2px;background:#d8e6ea}.role{position:relative;margin-bottom:27px}.role:before{content:"";position:absolute;left:-23px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 5px var(--soft)}.role .date{font-size:12px;font-weight:850;color:var(--teal);text-transform:uppercase;letter-spacing:.06em}.role h3{font-size:19px;margin:4px 0 3px}.role p{font-size:14px;color:var(--muted);margin:0}
     .about-box{background:var(--dark);color:white;border-radius:28px;padding:34px}.about-box h3{font-size:28px;line-height:1.2;margin:0 0 12px}.about-box p{color:#cddae3}.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tools span{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);padding:7px 10px;border-radius:10px;font-size:12px;font-weight:700}
     .cta{padding:75px 0}.cta-box{background:linear-gradient(120deg,#e7f4f7,#ffffff);border:1px solid #cfe5ea;border-radius:30px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.cta h2{font-size:36px;letter-spacing:-.03em;line-height:1.1;margin:0 0 8px}.cta p{color:var(--muted);margin:0}
     footer{padding:28px 0 44px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:900px){.links{display:none}.hero{padding-top:54px}.hero-grid,.experience,.cta-box{grid-template-columns:1fr}.hero-card{min-height:auto}.proof-grid{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}.work-grid{grid-template-columns:1fr}.cta-box{align-items:start}}
-    @media(max-width:580px){.wrap{width:min(var(--max),calc(100% - 28px))}.proof-grid,.services{grid-template-columns:1fr}.hero{padding-top:42px}.hero-card{padding:24px}.actions .btn{width:100%}.gallery{grid-template-columns:1fr}.cta-box{padding:28px}.nav .btn{padding:10px 12px}}
+    @media(max-width:900px){.case-study-grid{grid-template-columns:1fr}.case-visual{min-height:280px}.portfolio-split{grid-template-columns:1fr}.links{display:none}.hero{padding-top:54px}.hero-grid,.experience,.cta-box{grid-template-columns:1fr}.hero-card{min-height:auto}.proof-grid{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}.work-grid{grid-template-columns:1fr}.cta-box{align-items:start}.work-slider-track{grid-auto-columns:minmax(230px,56%)}.slider-nav{opacity:.9;transform:translateY(-50%) scale(.92)}.lightbox-nav{opacity:.9}}
+    @media(max-width:580px){.wrap{width:min(var(--max),calc(100% - 28px))}.proof-grid,.services{grid-template-columns:1fr}.hero{padding-top:42px}.hero-card{padding:24px}.actions .btn{width:100%}.cta-box{padding:28px}.nav .btn{padding:10px 12px}.gallery-project{padding:16px}.gallery-project-head{align-items:flex-start;flex-direction:column;gap:4px}.gallery-hint{white-space:normal}.work-slider-track{grid-auto-columns:82%;gap:10px}.slider-nav{width:38px;height:38px;font-size:20px}.lightbox{padding:10px}.lightbox-dialog{height:94vh}.lightbox img{max-height:calc(94vh - 90px);border-radius:9px}.lightbox-close{right:4px;top:4px}.lightbox-nav{width:42px;height:42px;font-size:25px}.lightbox-prev{left:4px}.lightbox-next{right:4px}.lightbox-meta{font-size:12px;padding:0 40px}}
   </style>
 </head>
 <body>
@@ -52,7 +94,7 @@
     <div class="wrap nav">
       <a class="brand" href="#top">Christian Vern <span>Tan</span></a>
       <div class="links">
-        <a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a>
+        <a href="#services">Services</a><a href="#work">Work</a><a href="#gallery">Gallery</a><a href="#experience">Experience</a><a href="#about">About</a>
       </div>
       <a class="btn primary" href="mailto:tanchristianvern@gmail.com">Contact Me</a>
     </div>
@@ -63,8 +105,8 @@
       <div class="wrap hero-grid">
         <div>
           <div class="badge"><span class="dot"></span> Open to full-time remote E-Commerce VA opportunities</div>
-          <h1>E-commerce support that keeps products accurate, organized, and ready to sell.</h1>
-          <p class="lead">I'm Christian, an E-Commerce Virtual Assistant with hands-on EasyOrders experience, remote content support, and 7 years of software engineering experience. I help online stores with product listings, landing-page content, AI-assisted product creatives, workflow tracking, and quality control.</p>
+          <h1>From product link to publish-ready e-commerce content.</h1>
+          <p class="lead">I'm Christian, an E-Commerce Virtual Assistant with hands-on EasyOrders experience. I turn client-supplied product references into organized listings, landing-page copy, Facebook ad copy, featured images, supporting AI creatives, and review-ready tasks managed through Notion. I also publish and format WordPress articles.</p>
           <div class="actions">
             <a class="btn primary" href="#work">View E-Commerce Work</a>
             <a class="btn" href="Christian_Vern_Tan_Ecommerce_VA_Resume_1Page.pdf" target="_blank" rel="noopener">Download Resume</a>
@@ -74,8 +116,8 @@
         <aside class="hero-card">
           <div>
             <div class="eyebrow">What I bring</div>
-            <h2>E-commerce execution with a technical problem-solving mindset.</h2>
-            <p>My background combines store support and content workflows with years of software engineering, QA, troubleshooting, documentation, and client coordination.</p>
+            <h2>Structured e-commerce execution with a technical problem-solving mindset.</h2>
+            <p>My background combines EasyOrders product workflows, AI-assisted content and creatives, WordPress publishing, and years of software engineering, QA, troubleshooting, and documentation.</p>
           </div>
           <div class="stack">
             <span class="pill">EasyOrders</span><span class="pill">Product Listings</span><span class="pill">Canva</span><span class="pill">ChatGPT</span><span class="pill">Gemini</span><span class="pill">Midjourney</span><span class="pill">WordPress</span><span class="pill">Notion</span>
@@ -86,10 +128,10 @@
 
     <div class="proof">
       <div class="wrap proof-grid">
-        <div class="proof-item"><strong>EasyOrders</strong><span>Hands-on product listing and storefront support</span></div>
-        <div class="proof-item"><strong>UAE COD</strong><span>Product content and listing experience for a UAE storefront</span></div>
+        <div class="proof-item"><strong>EasyOrders</strong><span>From Amazon product link to store-ready listing and creatives</span></div>
+        <div class="proof-item"><strong>Notion Workflow</strong><span>Task tracking from product intake through approval</span></div>
+        <div class="proof-item"><strong>WordPress</strong><span>Article formatting, images, captions, and publishing support</span></div>
         <div class="proof-item"><strong>7 Years</strong><span>Professional software engineering experience</span></div>
-        <div class="proof-item"><strong>Remote VA</strong><span>WordPress, content, AI creative, and publishing support</span></div>
       </div>
     </div>
 
@@ -109,39 +151,138 @@
 
     <section id="work">
       <div class="wrap">
-        <div class="section-head"><div class="kicker">Selected Work</div><h2>E-commerce operations first, creative support second.</h2><p>These examples show the mix of product listing, content, workflow, and creative work I can support in a remote e-commerce role.</p></div>
-        <div class="work-grid">
-          <article class="project">
-            <div class="project-body text-project">
-              <div>
-                <span class="tag">EasyOrders · Product Listing</span>
-                <h3>Live UAE COD Product Listing</h3>
-                <p>Built and published a product page on an EasyOrders-powered COD storefront serving the UAE market.</p>
-                <ul><li>Product title and product information</li><li>SKU, price, categories, and SEO fields</li><li>Product images and page organization</li><li>Final quality check before publishing</li></ul>
+        <div class="section-head">
+          <div class="kicker">Selected Work</div>
+          <h2>Hands-on e-commerce and WordPress work.</h2>
+          <p>Real client workflows showing how I turn raw product links and article drafts into publish-ready content, visuals, and organized deliverables.</p>
+        </div>
+
+        <article class="case-study">
+          <div class="case-study-grid">
+            <div class="case-copy">
+              <span class="tag">EasyOrders · Notion · AI-Assisted Content</span>
+              <h3>E-Commerce Product Listing & Landing Page Workflow</h3>
+              <p>The client provides an Amazon product link. I then prepare the product assets, write the landing-page content, create ad copy and product creatives, and move the task through a structured Notion review workflow before approval.</p>
+              <div class="process-strip">
+                <span class="process-step">Product Link</span><span class="process-step">Image Selection</span><span class="process-step">AI Copy</span><span class="process-step">LP Creation</span><span class="process-step">Creative Images</span><span class="process-step">Review</span><span class="process-step">Approved</span>
               </div>
-              <a class="project-link" href="https://www.assileuae.site/products/perfume" target="_blank" rel="noopener">View live product listing →</a>
+              <ul class="case-list">
+                <li>Source and organize product images from the client-provided product reference.</li>
+                <li>Create original headline, subheadline, product specifications, and Facebook ad copy using structured AI prompts.</li>
+                <li>Create the featured product image plus three supporting product creatives (square and vertical formats).</li>
+                <li>Build and organize the final product listing in EasyOrders.</li>
+                <li>Track each task in Notion from New Product to Content Creation, LP Creation, Review, and Approved.</li>
+              </ul>
+              <div class="live-links">
+                <a class="live-link" href="https://www.tidybear.site/products/baby-pillow-1" target="_blank" rel="noopener">Baby Pillow ↗</a>
+                <a class="live-link" href="https://www.tidybear.site/products/scalp-brush-1" target="_blank" rel="noopener">Scalp Brush ↗</a>
+                <a class="live-link" href="https://www.tidybear.site/products/star-and-galaxy-projector" target="_blank" rel="noopener">Galaxy Projector ↗</a>
+              </div>
+            </div>
+            <div class="case-visual">
+              <button class="work-image landscape" type="button" data-title="Notion E-Commerce Workflow" data-caption="Client workflow from New Product through Content Creation, LP Creation, Review, and Approved" aria-label="Open Notion ecommerce workflow screenshot full screen">
+                <img src="assets/work/notion-ecommerce-workflow.png" alt="Notion board showing ecommerce product workflow from new product through approval" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <div class="portfolio-split">
+          <article class="mini-case">
+            <span class="tag">Live Product Pages</span>
+            <h3>EasyOrders Product Listing Examples</h3>
+            <p>Examples of completed product pages where I handled the content and listing workflow from a supplied product reference, including featured images and supporting creatives.</p>
+            <ul>
+              <li>Product-focused headline and subheadline</li>
+              <li>Product specifications and benefit copy</li>
+              <li>Facebook ad copy and supporting marketing content</li>
+              <li>Featured and supporting product creatives</li>
+            </ul>
+            <div class="live-links">
+              <a class="live-link" href="https://www.tidybear.site/products/baby-pillow-1" target="_blank" rel="noopener">View Baby Pillow ↗</a>
+              <a class="live-link" href="https://www.tidybear.site/products/scalp-brush-1" target="_blank" rel="noopener">View Scalp Brush ↗</a>
+              <a class="live-link" href="https://www.tidybear.site/products/star-and-galaxy-projector" target="_blank" rel="noopener">View Galaxy Projector ↗</a>
             </div>
           </article>
-          <article class="project">
-            <div class="project-body text-project">
-              <div>
-                <span class="tag">Content · Workflow</span>
-                <h3>Landing Page & Ad Brief Workflow</h3>
-                <p>Turned basic product and offer information into structured, review-ready e-commerce content.</p>
-                <ul><li>Headline and subtitle development</li><li>Benefit and feature copy</li><li>Ad-ready messaging and audience ideas</li><li>Notion pipeline from new product to review and approval</li></ul>
-              </div>
-              <span class="project-link">EasyOrders + Notion + AI-assisted content workflow</span>
+
+          <article class="mini-case">
+            <span class="tag">WordPress · Content Publishing</span>
+            <h3>Article Formatting & Visual Publishing</h3>
+            <p>I support WordPress publishing by cleaning article structure and making each post visually consistent and reader-friendly.</p>
+            <ul>
+              <li>Correct headline and paragraph formatting</li>
+              <li>Add and format captions</li>
+              <li>Select eye-catching featured images</li>
+              <li>Add relevant stock photos under subheadings</li>
+              <li>Review the final article layout before publishing</li>
+            </ul>
+            <div class="live-links">
+              <a class="live-link" href="https://www.tprteaching.com/" target="_blank" rel="noopener">TPR Teaching ↗</a>
+              <a class="live-link" href="https://www.tprteaching.com/15-bad-habits-parents-need-to-break-for-their-childs-sake/" target="_blank" rel="noopener">Article Example ↗</a>
             </div>
-          </article>
-          <article class="project">
-            <div class="project-media"><img src="assets/img/kemey-01-hero.jpg" alt="E-commerce feature creative for a hot air styling brush" /></div>
-            <div class="project-body"><span class="tag">AI Creative · E-Commerce</span><h3>Kemey Hot Air Styling Brush</h3><p>A product creative set covering feature callouts, usage, lifestyle placement, and vertical ad presentation.</p><div class="gallery"><img src="assets/img/kemey-02-features.jpg" alt="Feature callout creative for hot air styling brush" /><img src="assets/img/kemey-04-lifestyle-vertical.jpg" alt="Vertical lifestyle advertisement for hot air styling brush" /></div></div>
-          </article>
-          <article class="project">
-            <div class="project-media"><img src="assets/img/dino-01-hero.jpg" alt="E-commerce hero creative for a dinosaur baby nap pillow" /></div>
-            <div class="project-body"><span class="tag">AI Creative · Product Advertising</span><h3>Stegosaurus Baby Nap Pillow</h3><p>A multi-format product creative set with hero, detail, lifestyle, and vertical advertising variations.</p><div class="gallery"><img src="assets/img/dino-02-detail.jpg" alt="Detail callout creative for dinosaur baby nap pillow" /><img src="assets/img/dino-04-vertical.jpg" alt="Vertical lifestyle advertisement for dinosaur baby nap pillow" /></div></div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Work Gallery</div>
+          <h2>Workflow screenshots and creative samples.</h2>
+          <p>Click any image for a full-screen view. On galleries with multiple images, hover to reveal previous/next controls or swipe on mobile.</p>
+        </div>
+
+        <div class="work-gallery">
+          <article class="gallery-project">
+            <div class="gallery-project-head">
+              <div><span class="tag">Workflow · Client Operations</span><h3>Notion Product Creation Pipeline</h3><p>Task stages from new product intake through content creation, landing-page creation, review, and approval.</p></div>
+              <span class="gallery-hint">Click → full view</span>
+            </div>
+            <div class="work-slider" data-slider>
+              <button class="slider-nav prev" type="button" aria-label="Previous images">‹</button>
+              <div class="work-slider-track">
+                <button class="work-image landscape" type="button" data-title="Notion Product Creation Pipeline" data-caption="E-commerce workflow board used to track product tasks from intake through approval" aria-label="Open Notion product creation pipeline full screen"><img src="assets/work/notion-ecommerce-workflow.png" alt="Notion board for ecommerce landing page creation tasks" loading="lazy" /></button>
+              </div>
+              <button class="slider-nav next" type="button" aria-label="Next images">›</button>
+            </div>
+          </article>
+
+          <article class="gallery-project">
+            <div class="gallery-project-head">
+              <div><span class="tag">AI Creative · E-Commerce</span><h3>Kemey Hot Air Styling Brush</h3><p>Featured image plus sub-images showing features, usage, and a vertical ad format.</p></div>
+              <span class="gallery-hint">Hover → browse · Click → full view</span>
+            </div>
+            <div class="work-slider" data-slider>
+              <button class="slider-nav prev" type="button" aria-label="Previous images">‹</button>
+              <div class="work-slider-track">
+                <button class="work-image square" type="button" data-title="Kemey Hot Air Styling Brush" data-caption="Featured product image" aria-label="Open Kemey featured creative full screen"><img src="assets/img/kemey-01-hero.jpg" alt="Featured e-commerce creative for Kemey hot air styling brush" loading="lazy" /></button>
+                <button class="work-image square" type="button" data-title="Kemey Hot Air Styling Brush" data-caption="Sub-image 1 · feature callout layout" aria-label="Open Kemey feature callout creative full screen"><img src="assets/img/kemey-02-features.jpg" alt="Feature callout creative for Kemey hot air styling brush" loading="lazy" /></button>
+                <button class="work-image square" type="button" data-title="Kemey Hot Air Styling Brush" data-caption="Sub-image 2 · everyday use and benefits" aria-label="Open Kemey usage creative full screen"><img src="assets/img/kemey-03-usage.jpg" alt="Usage and benefits creative for Kemey hot air styling brush" loading="lazy" /></button>
+                <button class="work-image" type="button" data-title="Kemey Hot Air Styling Brush" data-caption="Sub-image 3 · vertical ad creative" aria-label="Open Kemey vertical ad creative full screen"><img src="assets/img/kemey-04-lifestyle-vertical.jpg" alt="Vertical lifestyle advertisement for Kemey hot air styling brush" loading="lazy" /></button>
+              </div>
+              <button class="slider-nav next" type="button" aria-label="Next images">›</button>
+            </div>
+          </article>
+
+          <article class="gallery-project">
+            <div class="gallery-project-head">
+              <div><span class="tag">AI Creative · Product Advertising</span><h3>Stegosaurus Baby Nap Pillow</h3><p>Featured image plus sub-images highlighting design details, usage, and a vertical ad format.</p></div>
+              <span class="gallery-hint">Hover → browse · Click → full view</span>
+            </div>
+            <div class="work-slider" data-slider>
+              <button class="slider-nav prev" type="button" aria-label="Previous images">‹</button>
+              <div class="work-slider-track">
+                <button class="work-image square" type="button" data-title="Stegosaurus Baby Nap Pillow" data-caption="Featured product image" aria-label="Open dinosaur pillow featured creative full screen"><img src="assets/img/dino-01-hero.jpg" alt="Featured e-commerce creative for a dinosaur baby nap pillow" loading="lazy" /></button>
+                <button class="work-image square" type="button" data-title="Stegosaurus Baby Nap Pillow" data-caption="Sub-image 1 · design detail callout" aria-label="Open dinosaur pillow detail creative full screen"><img src="assets/img/dino-02-detail.jpg" alt="Design detail callout creative for dinosaur baby nap pillow" loading="lazy" /></button>
+                <button class="work-image square" type="button" data-title="Stegosaurus Baby Nap Pillow" data-caption="Sub-image 2 · lifestyle / usage scene" aria-label="Open dinosaur pillow lifestyle creative full screen"><img src="assets/img/dino-03-usage.jpg" alt="Lifestyle and usage creative for dinosaur baby nap pillow" loading="lazy" /></button>
+                <button class="work-image" type="button" data-title="Stegosaurus Baby Nap Pillow" data-caption="Sub-image 3 · vertical ad creative" aria-label="Open dinosaur pillow vertical creative full screen"><img src="assets/img/dino-04-vertical.jpg" alt="Vertical lifestyle advertisement for dinosaur baby nap pillow" loading="lazy" /></button>
+              </div>
+              <button class="slider-nav next" type="button" aria-label="Next images">›</button>
+            </div>
+          </article>
+        </div>
+        <p class="gallery-note"><strong>Built to grow:</strong> this gallery already includes my e-commerce samples, workflow screenshot, and live creative examples. You can still add more images anytime without changing the gallery JavaScript.</p>
       </div>
     </section>
 
@@ -174,5 +315,104 @@
   </main>
 
   <footer><div class="wrap foot"><span>© 2026 Christian Vern Tan</span><span>EasyOrders · E-Commerce Support · Product Listing · AI & Canva</span></div></footer>
+
+
+  <div class="lightbox" id="workLightbox" role="dialog" aria-modal="true" aria-label="Portfolio image viewer" aria-hidden="true">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+      <div class="lightbox-img-wrap"><img id="lightboxImage" src="" alt="" /></div>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+      <div class="lightbox-meta"><strong id="lightboxTitle"></strong><span id="lightboxCaption"></span><span class="lightbox-count" id="lightboxCount"></span></div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const galleryItems = Array.from(document.querySelectorAll('.work-image'));
+      const lightbox = document.getElementById('workLightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      const lightboxCount = document.getElementById('lightboxCount');
+      const closeButton = lightbox.querySelector('.lightbox-close');
+      const prevButton = lightbox.querySelector('.lightbox-prev');
+      const nextButton = lightbox.querySelector('.lightbox-next');
+      let activeIndex = 0;
+      let touchStartX = 0;
+
+      function updateSliderButtons(slider) {
+        const track = slider.querySelector('.work-slider-track');
+        const prev = slider.querySelector('.slider-nav.prev');
+        const next = slider.querySelector('.slider-nav.next');
+        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth - 2);
+        prev.disabled = track.scrollLeft <= 2;
+        next.disabled = track.scrollLeft >= maxScroll;
+      }
+
+      document.querySelectorAll('[data-slider]').forEach((slider) => {
+        const track = slider.querySelector('.work-slider-track');
+        const prev = slider.querySelector('.slider-nav.prev');
+        const next = slider.querySelector('.slider-nav.next');
+        const scrollAmount = () => Math.max(240, track.clientWidth * 0.72);
+        prev.addEventListener('click', () => track.scrollBy({left: -scrollAmount(), behavior: 'smooth'}));
+        next.addEventListener('click', () => track.scrollBy({left: scrollAmount(), behavior: 'smooth'}));
+        track.addEventListener('scroll', () => updateSliderButtons(slider), {passive:true});
+        window.addEventListener('resize', () => updateSliderButtons(slider));
+        requestAnimationFrame(() => updateSliderButtons(slider));
+      });
+
+      function renderLightbox() {
+        const item = galleryItems[activeIndex];
+        const img = item.querySelector('img');
+        lightboxImage.src = img.currentSrc || img.src;
+        lightboxImage.alt = img.alt || '';
+        lightboxTitle.textContent = item.dataset.title || '';
+        lightboxCaption.textContent = item.dataset.caption ? ' · ' + item.dataset.caption : '';
+        lightboxCount.textContent = `${activeIndex + 1} / ${galleryItems.length}`;
+      }
+
+      function openLightbox(index) {
+        activeIndex = index;
+        renderLightbox();
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+        closeButton.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-open');
+      }
+
+      function moveLightbox(step) {
+        activeIndex = (activeIndex + step + galleryItems.length) % galleryItems.length;
+        renderLightbox();
+      }
+
+      galleryItems.forEach((item, index) => item.addEventListener('click', () => openLightbox(index)));
+      closeButton.addEventListener('click', closeLightbox);
+      prevButton.addEventListener('click', () => moveLightbox(-1));
+      nextButton.addEventListener('click', () => moveLightbox(1));
+      lightbox.addEventListener('click', (event) => { if (event.target === lightbox) closeLightbox(); });
+
+      document.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (event.key === 'Escape') closeLightbox();
+        if (event.key === 'ArrowLeft') moveLightbox(-1);
+        if (event.key === 'ArrowRight') moveLightbox(1);
+      });
+
+      lightbox.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].screenX; }, {passive:true});
+      lightbox.addEventListener('touchend', (event) => {
+        const delta = event.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(delta) < 45) return;
+        moveLightbox(delta > 0 ? -1 : 1);
+      }, {passive:true});
+    })();
+  </script>
+
 </body>
 </html>
