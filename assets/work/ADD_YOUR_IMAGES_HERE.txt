@@ -1,0 +1,2 @@
+Place new portfolio images in this folder.
+Then add a .work-image block in index.html using the instructions in ADD_IMAGES_GUIDE.txt.
